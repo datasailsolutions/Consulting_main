@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-label="">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c6b6f"/>
+      <stop offset="0.58" stop-color="#0f3f46"/>
+      <stop offset="1" stop-color="#b4643b"/>
+    </linearGradient>
+    <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#g)"/>
+  <rect width="1800" height="1100" fill="url(#grid)"/>
+  <path d="M0 790C170 720 320 690 500 724C710 764 810 900 1030 900C1240 900 1400 770 1800 710V1100H0Z" fill="rgba(255,255,255,0.11)"/>
+  <path d="M0 900C210 832 370 830 556 870C748 912 920 1010 1140 980C1350 952 1510 860 1800 840V1100H0Z" fill="rgba(255,255,255,0.08)"/>
+  <path d="M1230 220L1460 280L1288 448L1190 388Z" fill="rgba(255,255,255,0.14)"/>
+  <path d="M1316 270L1414 296L1284 420L1232 388Z" fill="rgba(8,60,68,0.35)"/>
+  <circle cx="1394" cy="350" r="102" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+  <circle cx="1394" cy="350" r="54" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2"/>
+</svg>
