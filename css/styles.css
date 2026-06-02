@@ -1164,6 +1164,80 @@ h1 {
   margin-top: 24px;
 }
 
+.projects-hero h1 {
+  max-width: 1060px;
+}
+
+.construction-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 64px);
+  padding: clamp(34px, 5vw, 58px);
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(8, 60, 68, 0.95), rgba(13, 85, 91, 0.9)),
+    url("../assets/workflow-tools.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.construction-panel .section-kicker {
+  color: #f1c16b;
+}
+
+.construction-panel h2 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 4vw, 3.7rem);
+  line-height: 1.05;
+}
+
+.construction-panel p:not(.section-kicker) {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.06rem;
+}
+
+.project-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 34px;
+}
+
+.project-preview-grid article {
+  min-height: 285px;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 34px rgba(16, 32, 39, 0.06);
+}
+
+.project-preview-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 36px;
+  margin-bottom: 32px;
+  color: var(--teal-dark);
+  background: var(--mist);
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.project-preview-grid h3 {
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.project-preview-grid p {
+  color: var(--muted);
+}
+
 .image-band {
   padding-top: 0;
   padding-bottom: 20px;
@@ -1350,6 +1424,7 @@ h1 {
 @media (max-width: 980px) {
   .card-grid,
   .values-grid,
+  .project-preview-grid,
   .pricing-value-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1423,6 +1498,7 @@ h1 {
   .pricing-showcase,
   .pricing-principles,
   .pricing-detail-grid,
+  .construction-panel,
   .detail-row,
   .contact-layout,
   .founder-card,
@@ -1506,6 +1582,7 @@ h1 {
 
   .card-grid,
   .values-grid,
+  .project-preview-grid,
   .pricing-value-strip,
   .pricing-map,
   .map-loop {
