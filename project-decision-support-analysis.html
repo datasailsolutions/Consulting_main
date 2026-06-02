@@ -101,6 +101,191 @@
       </article>
     </section>
 
+    <section class="section report-highlight-section">
+      <div class="section-heading">
+        <p class="section-kicker">From the report</p>
+        <h2>The deliverable included real analytical reporting, not just a written summary.</h2>
+        <p class="prose">The project report walked through the key decision-rule options, compared them side by side, and gave stakeholders enough evidence to choose between simplicity, maximum accuracy, and triage.</p>
+      </div>
+
+      <div class="report-dashboard">
+        <div class="report-dashboard-header">
+          <div>
+            <p class="report-label">Iteration 2 analysis</p>
+            <h3>Can stratified cutoffs or a small combined model improve the baseline?</h3>
+          </div>
+          <span>Interactive HTML report</span>
+        </div>
+
+        <div class="report-metric-row">
+          <article>
+            <span>Best approach</span>
+            <strong>Logistic regression</strong>
+          </article>
+          <article>
+            <span>Accuracy</span>
+            <strong>89.0%</strong>
+          </article>
+          <article>
+            <span>CV AUC, logreg</span>
+            <strong>0.934</strong>
+          </article>
+          <article>
+            <span>CV AUC, tree</span>
+            <strong>0.926</strong>
+          </article>
+        </div>
+
+        <div class="report-visual-grid">
+          <article class="report-panel report-wide">
+            <div class="panel-heading">
+              <h4>Accuracy by approach</h4>
+              <p>Side-by-side comparison from the report</p>
+            </div>
+            <div class="accuracy-chart" aria-label="Accuracy by analytical approach">
+              <div style="--score: 73%">
+                <span>Single global cutoff</span>
+                <b></b>
+                <em>73.0%</em>
+              </div>
+              <div style="--score: 77%">
+                <span>Sex-stratified cutoff</span>
+                <b></b>
+                <em>77.0%</em>
+              </div>
+              <div style="--score: 83%">
+                <span>Delta-days stratified</span>
+                <b></b>
+                <em>83.0%</em>
+              </div>
+              <div style="--score: 89%">
+                <span>Logistic regression</span>
+                <b></b>
+                <em>89.0%</em>
+              </div>
+              <div style="--score: 85%">
+                <span>Decision tree, CV</span>
+                <b></b>
+                <em>85.0%</em>
+              </div>
+            </div>
+          </article>
+
+          <article class="report-panel">
+            <div class="panel-heading">
+              <h4>Cutoff testing</h4>
+              <p>Interpretable rules were compared before recommending a model.</p>
+            </div>
+            <table class="report-mini-table">
+              <thead>
+                <tr>
+                  <th>Rule</th>
+                  <th>Cutoff</th>
+                  <th>Specificity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Global</td>
+                  <td>5.326</td>
+                  <td>60.0%</td>
+                </tr>
+                <tr>
+                  <td>Sex stratified</td>
+                  <td>5.326 / 4.738</td>
+                  <td>68.3%</td>
+                </tr>
+                <tr>
+                  <td>Delta-days split</td>
+                  <td>2.967 / 5.326</td>
+                  <td>76.7%</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+
+          <article class="report-panel">
+            <div class="panel-heading">
+              <h4>Grey-zone triage</h4>
+              <p>A two-cutoff option separated clear cases from follow-up cases.</p>
+            </div>
+            <div class="triage-band">
+              <span>Rule-in</span>
+              <span>Indeterminate</span>
+              <span>Rule-out</span>
+            </div>
+            <div class="triage-stats">
+              <div>
+                <strong>44.0%</strong>
+                <span>Classified with high confidence</span>
+              </div>
+              <div>
+                <strong>56.0%</strong>
+                <span>Flagged for follow-up review</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="report-table-wrap">
+          <table class="report-comparison-table">
+            <thead>
+              <tr>
+                <th>Approach</th>
+                <th>Accuracy</th>
+                <th>Sensitivity</th>
+                <th>Specificity</th>
+                <th>AUC</th>
+                <th>Use case</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Single global cutoff</td>
+                <td>73.0%</td>
+                <td>92.5%</td>
+                <td>60.0%</td>
+                <td>0.803</td>
+                <td>Simple baseline</td>
+              </tr>
+              <tr>
+                <td>Sex-stratified cutoff</td>
+                <td>77.0%</td>
+                <td>90.0%</td>
+                <td>68.3%</td>
+                <td>-</td>
+                <td>Small interpretability gain</td>
+              </tr>
+              <tr>
+                <td>Delta-days stratified cutoff</td>
+                <td>83.0%</td>
+                <td>92.5%</td>
+                <td>76.7%</td>
+                <td>-</td>
+                <td>Simple rule with stronger performance</td>
+              </tr>
+              <tr>
+                <td>Logistic regression, cross-validated</td>
+                <td>89.0%</td>
+                <td>80.0%</td>
+                <td>95.0%</td>
+                <td>0.934</td>
+                <td>Best overall model</td>
+              </tr>
+              <tr>
+                <td>Decision tree, cross-validated</td>
+                <td>85.0%</td>
+                <td>87.5%</td>
+                <td>83.3%</td>
+                <td>0.926</td>
+                <td>Interpretable ML alternative</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section class="section case-analysis-showcase reveal">
       <div class="section-heading">
         <p class="section-kicker">What was done</p>
