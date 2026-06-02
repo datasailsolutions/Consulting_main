@@ -1284,6 +1284,10 @@ h1 {
   color: #6a7a82;
 }
 
+.project-card-muted .text-link {
+  color: #5f7178;
+}
+
 .text-link {
   display: inline-flex;
   margin-top: 12px;
@@ -1293,6 +1297,21 @@ h1 {
 
 .featured-project-card .text-link {
   color: #f1c16b;
+}
+
+.placeholder-detail {
+  padding: clamp(34px, 5vw, 58px);
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.placeholder-detail h2 {
+  max-width: 820px;
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.05;
 }
 
 .case-hero {
