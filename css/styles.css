@@ -1526,8 +1526,8 @@ h1 {
 }
 
 .report-embed-shell {
-  height: min(1120px, 82vh);
-  min-height: 720px;
+  height: 6200px;
+  min-height: 6200px;
   background: var(--white);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -2314,6 +2314,11 @@ h1 {
 
   .panel-heading p {
     text-align: left;
+  }
+
+  .report-embed-shell {
+    height: 6600px;
+    min-height: 6600px;
   }
 
   .pricing-map {
