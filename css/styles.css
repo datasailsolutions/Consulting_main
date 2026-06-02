@@ -1216,6 +1216,16 @@ h1 {
   box-shadow: 0 12px 34px rgba(16, 32, 39, 0.06);
 }
 
+.featured-project-card {
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(8, 60, 68, 0.96), rgba(13, 85, 91, 0.92)),
+    url("../assets/workflow-tools.jpg") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
 .project-preview-grid span {
   display: inline-grid;
   place-items: center;
@@ -1236,6 +1246,356 @@ h1 {
 
 .project-preview-grid p {
   color: var(--muted);
+}
+
+.featured-project-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.text-link {
+  display: inline-flex;
+  margin-top: 12px;
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+.featured-project-card .text-link {
+  color: #f1c16b;
+}
+
+.case-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(360px, 0.7fr);
+  align-items: center;
+  gap: clamp(36px, 6vw, 80px);
+  min-height: 720px;
+  padding: 112px max(20px, calc((100vw - var(--max)) / 2)) 118px;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(7, 28, 33, 0.97), rgba(8, 60, 68, 0.86) 50%, rgba(8, 60, 68, 0.5)),
+    linear-gradient(135deg, rgba(180, 100, 59, 0.22), rgba(12, 107, 111, 0.18)),
+    url("../assets/workflow-tools.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.case-hero::after {
+  content: "";
+  position: absolute;
+  left: max(20px, calc((100vw - var(--max)) / 2));
+  right: max(20px, calc((100vw - var(--max)) / 2));
+  bottom: 34px;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(241, 193, 107, 0.72), transparent);
+}
+
+.case-hero-copy,
+.case-report-card {
+  position: relative;
+  z-index: 1;
+}
+
+.case-hero .eyebrow {
+  color: #f1c16b;
+}
+
+.case-hero h1 {
+  max-width: 760px;
+  color: var(--white);
+  font-size: clamp(3.2rem, 6.4vw, 6.2rem);
+}
+
+.case-hero-copy > p:not(.eyebrow) {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.case-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.case-hero-tags span {
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.case-report-card {
+  padding: 24px;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 30px 78px rgba(0, 0, 0, 0.28);
+}
+
+.report-window-bar {
+  display: flex;
+  gap: 7px;
+  margin-bottom: 26px;
+}
+
+.report-window-bar span {
+  width: 10px;
+  height: 10px;
+  background: var(--line);
+  border-radius: 50%;
+}
+
+.report-window-bar span:first-child {
+  background: var(--copper);
+}
+
+.report-window-bar span:nth-child(2) {
+  background: var(--gold);
+}
+
+.report-window-bar span:nth-child(3) {
+  background: var(--teal);
+}
+
+.report-label {
+  margin-bottom: 8px;
+  color: var(--copper);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.case-report-card h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  line-height: 1.04;
+}
+
+.report-kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.report-kpis div {
+  min-height: 98px;
+  padding: 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.report-kpis span,
+.report-bars span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.report-kpis strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--teal-dark);
+  font-size: clamp(1.1rem, 2vw, 1.45rem);
+  line-height: 1.1;
+}
+
+.report-bars {
+  display: grid;
+  gap: 13px;
+}
+
+.report-bars div {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr) 42px;
+  align-items: center;
+  gap: 10px;
+}
+
+.report-bars b {
+  position: relative;
+  display: block;
+  height: 10px;
+  background: var(--mist);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.report-bars b::after {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--score);
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  border-radius: inherit;
+}
+
+.report-bars em {
+  color: var(--teal-dark);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.case-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  padding-top: 34px;
+}
+
+.case-summary-grid article,
+.analysis-method-grid article,
+.recommendation-stack article {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 38px rgba(16, 32, 39, 0.06);
+}
+
+.case-summary-grid article {
+  padding: clamp(28px, 5vw, 48px);
+}
+
+.case-summary-grid h2,
+.case-analysis-showcase h2,
+.case-dark-band h2,
+.case-recommendation h2 {
+  margin-bottom: 18px;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.05;
+}
+
+.case-summary-grid p:not(.section-kicker),
+.analysis-method-grid p,
+.recommendation-stack p {
+  color: var(--muted);
+}
+
+.case-analysis-showcase {
+  padding-top: 42px;
+}
+
+.analysis-method-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.analysis-method-grid article {
+  min-height: 300px;
+  padding: 26px;
+}
+
+.analysis-method-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 44px;
+  height: 36px;
+  margin-bottom: 30px;
+  color: var(--teal-dark);
+  background: var(--mist);
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+.analysis-method-grid h3 {
+  margin-bottom: 12px;
+  font-size: 1.18rem;
+  line-height: 1.2;
+}
+
+.case-dark-band {
+  width: 100%;
+  padding: 90px clamp(20px, 4vw, 56px);
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(7, 28, 33, 0.96), rgba(8, 60, 68, 0.92)),
+    url("../assets/pricing-value.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.case-dark-inner {
+  width: min(var(--max), 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
+  align-items: center;
+  gap: clamp(34px, 6vw, 82px);
+}
+
+.case-dark-band .section-kicker {
+  color: #f1c16b;
+}
+
+.case-dark-band p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1.05rem;
+}
+
+.case-outcome-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.case-outcome-list article {
+  min-height: 240px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+
+.case-outcome-list span {
+  display: block;
+  margin-bottom: 18px;
+  color: #f1c16b;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-outcome-list strong {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--white);
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1;
+}
+
+.case-recommendation {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(30px, 6vw, 80px);
+  align-items: start;
+}
+
+.recommendation-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.recommendation-stack article {
+  padding: 24px;
+}
+
+.recommendation-stack h3 {
+  margin-bottom: 8px;
+  font-size: 1.18rem;
 }
 
 .image-band {
@@ -1425,7 +1785,9 @@ h1 {
   .card-grid,
   .values-grid,
   .project-preview-grid,
-  .pricing-value-strip {
+  .pricing-value-strip,
+  .analysis-method-grid,
+  .case-outcome-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1494,6 +1856,10 @@ h1 {
 
   .split,
   .visual-feature,
+  .case-hero,
+  .case-summary-grid,
+  .case-dark-inner,
+  .case-recommendation,
   .pricing-hero-inner,
   .pricing-showcase,
   .pricing-principles,
@@ -1530,6 +1896,12 @@ h1 {
 
   .pricing-hero {
     min-height: auto;
+  }
+
+  .case-hero {
+    min-height: auto;
+    padding-top: 86px;
+    padding-bottom: 92px;
   }
 
   .pricing-hero-inner {
@@ -1584,9 +1956,20 @@ h1 {
   .values-grid,
   .project-preview-grid,
   .pricing-value-strip,
+  .analysis-method-grid,
+  .case-outcome-list,
   .pricing-map,
   .map-loop {
     grid-template-columns: 1fr;
+  }
+
+  .report-kpis,
+  .report-bars div {
+    grid-template-columns: 1fr;
+  }
+
+  .report-bars em {
+    justify-self: start;
   }
 
   .pricing-map {
