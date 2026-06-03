@@ -1407,6 +1407,8 @@ h1 {
   align-items: center;
   width: auto;
   height: auto;
+  min-width: max-content;
+  max-width: 100%;
   margin: 0;
   min-height: 32px;
   border-radius: 999px;
@@ -1415,6 +1417,14 @@ h1 {
   font-weight: 850;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  white-space: normal;
+}
+
+.project-preview-grid .project-card-number,
+.project-preview-grid .project-card-status {
+  width: auto;
+  height: auto;
+  margin: 0;
 }
 
 .project-card-number {
@@ -2768,8 +2778,17 @@ h1 {
 
   .project-card-top {
     align-items: flex-start;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 22px 22px 0;
+  }
+
+  .project-card-number,
+  .project-card-status {
+    max-width: calc(50% - 6px);
+    padding: 7px 9px;
+    font-size: 0.66rem;
+    line-height: 1.15;
   }
 
   .project-card-visual {
