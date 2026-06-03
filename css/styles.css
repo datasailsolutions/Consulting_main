@@ -1540,6 +1540,48 @@ h1 {
   color: rgba(255, 255, 255, 0.8);
 }
 
+.project-card-proof {
+  display: grid;
+  gap: 10px;
+  margin: 0 24px 24px;
+}
+
+.project-card-proof div {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(12, 107, 111, 0.12);
+  border-radius: 8px;
+}
+
+.project-card-live .project-card-proof div {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.project-card-proof dt {
+  margin-bottom: 4px;
+  color: var(--copper);
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.project-card-live .project-card-proof dt {
+  color: #f1c16b;
+}
+
+.project-card-proof dd {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.project-card-live .project-card-proof dd {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .project-card-action {
   display: inline-flex;
   align-items: center;
@@ -1753,7 +1795,16 @@ h1 {
   padding-top: 34px;
 }
 
+.case-standard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 20px;
+  padding-top: 34px;
+}
+
 .case-summary-grid article,
+.case-standard-grid article,
 .analysis-method-grid article,
 .recommendation-stack article {
   background: var(--white);
@@ -1766,7 +1817,26 @@ h1 {
   padding: clamp(28px, 5vw, 48px);
 }
 
+.case-standard-grid article {
+  position: relative;
+  min-height: 360px;
+  padding: clamp(28px, 4vw, 42px);
+  overflow: hidden;
+}
+
+.case-standard-grid article::after {
+  content: "";
+  position: absolute;
+  right: -46px;
+  bottom: -46px;
+  width: 128px;
+  height: 128px;
+  border: 1px solid rgba(12, 107, 111, 0.18);
+  border-radius: 50%;
+}
+
 .case-summary-grid h2,
+.case-standard-grid h2,
 .case-analysis-showcase h2,
 .case-dark-band h2,
 .case-recommendation h2 {
@@ -1779,7 +1849,13 @@ h1 {
   font-size: clamp(1.85rem, 3.2vw, 3.15rem);
 }
 
+.case-standard-grid h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.55rem, 2.5vw, 2.35rem);
+}
+
 .case-summary-grid p:not(.section-kicker),
+.case-standard-grid p:not(.section-kicker),
 .analysis-method-grid p,
 .recommendation-stack p {
   color: var(--muted);
@@ -2412,7 +2488,8 @@ h1 {
   .pricing-value-strip,
   .analysis-method-grid,
   .report-metric-row,
-  .case-outcome-list {
+  .case-outcome-list,
+  .case-standard-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2484,6 +2561,7 @@ h1 {
   .case-hero,
   .case-brief,
   .case-summary-grid,
+  .case-standard-grid,
   .case-dark-inner,
   .case-recommendation,
   .report-visual-grid,
@@ -2706,6 +2784,10 @@ h1 {
   .project-card-action {
     width: calc(100% - 44px);
     margin: auto 22px 22px;
+  }
+
+  .project-card-proof {
+    margin-inline: 22px;
   }
 
   .trust-strip span {
