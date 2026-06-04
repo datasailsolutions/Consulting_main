@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="css/styles.css?v=20260603-project-standard">
+  <link rel="stylesheet" href="css/styles.css?v=20260603-static-case">
 </head>
 <body>
   <header class="site-header">
@@ -39,7 +39,7 @@
       <div class="case-hero-copy">
         <p class="eyebrow">Anonymized example project</p>
         <h1>Turning specialized data into a practical decision rule.</h1>
-        <p>DataSail used AI-enabled analytical workflows to rapidly evaluate a specialized dataset, compare decision-rule options, and package the findings into a clear report a business team could act on.</p>
+        <p>DataSail used AI-enabled analytical workflows to evaluate an anonymized dataset, compare decision-rule options, and deliver a clear report the business team could act on.</p>
         <div class="case-hero-tags">
           <span>Decision support</span>
           <span>Model comparison</span>
@@ -97,7 +97,7 @@
       <article>
         <p class="section-kicker">Solution summary</p>
         <h2>Compare the viable paths, then explain the tradeoffs.</h2>
-        <p>DataSail evaluated baseline cutoff rules, stratified decision logic, grey-zone triage, and lightweight machine-learning options, then packaged the findings into a report designed for business review.</p>
+        <p>DataSail evaluated baseline cutoff rules, stratified decision logic, grey-zone triage, and lightweight machine-learning options, then packaged the findings into a report for business review.</p>
       </article>
       <article>
         <p class="section-kicker">Value realized</p>
@@ -106,45 +106,25 @@
       </article>
     </section>
 
-    <section class="section report-embed-section">
+    <section class="section report-snapshots-section">
       <div class="section-heading">
-        <p class="section-kicker">Embedded report</p>
-        <h2>The actual analytical report is part of the example.</h2>
-        <p class="prose">The embedded report below preserves the original tables, Plotly charts, cutoff analysis, model comparison, grey-zone triage, and recommendation language from the project deliverable.</p>
+        <p class="section-kicker">Report snapshots</p>
+        <h2>The project delivered a stakeholder-ready analytical report.</h2>
+        <p class="prose">The static snapshots below show the kinds of outputs produced in the completed analysis: model comparison, cutoff review, triage logic, and recommendation-ready metrics.</p>
       </div>
-      <div class="report-embed-shell">
-        <iframe src="project-analysis-report.html" title="Embedded anonymized decision-rule analysis report"></iframe>
-      </div>
-      <a class="button primary report-open-link" href="project-analysis-report.html">Open Full Report</a>
-    </section>
-
-    <section class="section case-analysis-showcase reveal">
-      <div class="section-heading">
-        <p class="section-kicker">What was done</p>
-        <h2>The final report compared multiple paths instead of forcing one answer.</h2>
-        <p class="prose">The analysis moved from a simple baseline rule to more sophisticated options, then explained the accuracy, interpretability, operational complexity, and validation caveats for each.</p>
-      </div>
-      <div class="analysis-method-grid">
-        <article>
-          <span>01</span>
-          <h3>Baseline cutoff analysis</h3>
-          <p>Tested whether one threshold on the core result could separate outcomes, including ROC/AUC, sensitivity, specificity, and confusion-matrix review.</p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Stratified decision rules</h3>
-          <p>Compared practical rules that changed the cutoff based on available context, including time-window and demographic stratification.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Grey-zone triage</h3>
-          <p>Created a rule-in/rule-out option that confidently classified the clearest cases and flagged uncertain cases for follow-up.</p>
-        </article>
-        <article>
-          <span>04</span>
-          <h3>Lightweight ML comparison</h3>
-          <p>Evaluated logistic regression and decision tree options using cross-validation so the recommendation was not based only on in-sample performance.</p>
-        </article>
+      <div class="report-snapshot-grid">
+        <figure class="report-snapshot-card report-snapshot-card-large">
+          <img src="assets/report-snapshot-performance.svg" alt="Static report snapshot showing KPI cards and accuracy by approach">
+          <figcaption>Compared baseline, interpretable, and model-based options so the client could see performance tradeoffs at a glance.</figcaption>
+        </figure>
+        <figure class="report-snapshot-card">
+          <img src="assets/report-snapshot-cutoffs.svg" alt="Static report snapshot showing cutoff analysis and stratified decision rules">
+          <figcaption>Tested practical cutoff rules and identified where stratification improved the decision rule.</figcaption>
+        </figure>
+        <figure class="report-snapshot-card">
+          <img src="assets/report-snapshot-triage.svg" alt="Static report snapshot showing grey-zone triage logic">
+          <figcaption>Created a grey-zone triage option to classify high-confidence cases and flag the rest for follow-up.</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -153,7 +133,7 @@
         <div>
           <p class="section-kicker">Result</p>
           <h2>A weeks-long statistical workstream became a focused decision-support deliverable.</h2>
-          <p>This is the kind of work that can consume hundreds of hours across statistical analysis, model testing, report drafting, and stakeholder review. With the right AI-enabled workflow, the work was compressed into a practical analysis cycle with clear recommendations.</p>
+          <p>This project compressed statistical analysis, model testing, report drafting, and stakeholder review into a practical analysis cycle with clear recommendations.</p>
         </div>
         <div class="case-outcome-list">
           <article>
@@ -175,31 +155,10 @@
       </div>
     </section>
 
-    <section class="section case-recommendation">
-      <div>
-        <p class="section-kicker">Recommendation logic</p>
-        <h2>The report gave leadership options, not just statistics.</h2>
-      </div>
-      <div class="recommendation-stack">
-        <article>
-          <h3>If simplicity matters most</h3>
-          <p>Use the stratified cutoff. It is interpretable, easy to implement, and does not require a model at runtime.</p>
-        </article>
-        <article>
-          <h3>If maximum accuracy matters most</h3>
-          <p>Use the combined model. It produced the strongest cross-validated performance and gave the clearest overall signal.</p>
-        </article>
-        <article>
-          <h3>If operational triage matters most</h3>
-          <p>Use the grey-zone strategy. It separates high-confidence cases from cases that deserve follow-up review.</p>
-        </article>
-      </div>
-    </section>
-
     <section class="section cta-band">
       <div>
         <p class="section-kicker">Have a messy analytical question?</p>
-        <h2>We can turn a dataset, workflow, or decision problem into a practical fixed-bid project.</h2>
+        <h2>Bring the dataset, workflow, or decision problem. We can shape it into a practical fixed-bid project.</h2>
       </div>
       <a class="button primary" href="contact.html">Start a Conversation</a>
     </section>

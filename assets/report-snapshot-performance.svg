@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">Static report snapshot showing model performance comparison</title>
+  <desc id="desc">An anonymized decision-rule report dashboard with KPI cards and horizontal bars comparing analytical approaches.</desc>
+  <rect width="960" height="620" fill="#f7faf8"/>
+  <rect x="36" y="34" width="888" height="552" rx="22" fill="#ffffff" stroke="#d7e0de"/>
+  <rect x="36" y="34" width="888" height="86" rx="22" fill="#083c44"/>
+  <circle cx="76" cy="78" r="9" fill="#b4643b"/>
+  <circle cx="104" cy="78" r="9" fill="#d5a44b"/>
+  <circle cx="132" cy="78" r="9" fill="#0c6b6f"/>
+  <text x="172" y="72" fill="#f1c16b" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">ANONYMIZED REPORT</text>
+  <text x="172" y="100" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Model comparison and recommendation summary</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="70" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <text x="92" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">BEST APPROACH</text>
+    <text x="92" y="232" fill="#083c44" font-size="30" font-weight="850">Logistic model</text>
+    <rect x="356" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <text x="378" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">ACCURACY</text>
+    <text x="378" y="232" fill="#083c44" font-size="42" font-weight="850">89.0%</text>
+    <rect x="642" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <text x="664" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">CV AUC</text>
+    <text x="664" y="232" fill="#083c44" font-size="42" font-weight="850">0.934</text>
+
+    <text x="70" y="318" fill="#102027" font-size="24" font-weight="850">Accuracy by approach</text>
+    <line x1="280" y1="352" x2="280" y2="520" stroke="#d7e0de"/>
+    <line x1="850" y1="352" x2="850" y2="520" stroke="#d7e0de"/>
+    <g font-size="15" fill="#52636c">
+      <text x="70" y="380">Single global cutoff</text>
+      <text x="70" y="428">Stratified cutoff rule</text>
+      <text x="70" y="476">Logistic model, 5-fold CV</text>
+    </g>
+    <rect x="280" y="358" width="416" height="26" rx="13" fill="#e8f0ed"/>
+    <rect x="280" y="358" width="304" height="26" rx="13" fill="#9ca3af"/>
+    <text x="708" y="379" fill="#102027" font-size="16" font-weight="800">73%</text>
+    <rect x="280" y="406" width="416" height="26" rx="13" fill="#e8f0ed"/>
+    <rect x="280" y="406" width="346" height="26" rx="13" fill="#0c6b6f"/>
+    <text x="708" y="427" fill="#102027" font-size="16" font-weight="800">83%</text>
+    <rect x="280" y="454" width="416" height="26" rx="13" fill="#e8f0ed"/>
+    <rect x="280" y="454" width="370" height="26" rx="13" fill="#d5a44b"/>
+    <text x="708" y="475" fill="#102027" font-size="16" font-weight="800">89%</text>
+    <rect x="70" y="536" width="818" height="1" fill="#d7e0de"/>
+    <text x="70" y="564" fill="#52636c" font-size="14">Report output: compared baseline, interpretable, and model-based options with decision-ready tradeoffs.</text>
+  </g>
+</svg>
