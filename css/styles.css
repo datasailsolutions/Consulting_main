@@ -1528,6 +1528,125 @@ h1 {
   line-height: 1.35;
 }
 
+.about-hero {
+  width: min(1320px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.46fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 68px);
+  padding-top: 72px;
+  padding-bottom: 58px;
+}
+
+.about-hero h1 {
+  max-width: 840px;
+  font-size: clamp(2.7rem, 3.7vw, 4.25rem);
+  line-height: 1.03;
+}
+
+.about-hero p:not(.eyebrow) {
+  max-width: 740px;
+  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+}
+
+.about-hero-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 28px 0 26px;
+}
+
+.about-hero-points span {
+  color: var(--teal-dark);
+  background: var(--mist);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.about-hero-photo {
+  position: relative;
+  margin: 0;
+  padding: 14px;
+  background: var(--white);
+  border: 1px solid rgba(12, 107, 111, 0.18);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.about-hero-photo::after {
+  content: "";
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  width: 46%;
+  height: 46%;
+  border-right: 2px solid rgba(180, 100, 59, 0.42);
+  border-bottom: 2px solid rgba(180, 100, 59, 0.42);
+  border-radius: 0 0 8px 0;
+  pointer-events: none;
+}
+
+.about-hero-photo img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+}
+
+.about-hero-photo figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 4px 2px;
+}
+
+.about-hero-photo strong {
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.about-hero-photo span {
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-align: right;
+}
+
+.about-founder-band {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(30px, 5vw, 70px);
+  padding: clamp(34px, 5vw, 54px);
+  color: var(--white);
+  background:
+    linear-gradient(135deg, rgba(8, 60, 68, 0.96), rgba(13, 85, 91, 0.92)),
+    url("../assets/workflow-tools.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.about-founder-band .section-kicker {
+  color: #f1c16b;
+}
+
+.about-founder-band h2 {
+  margin-bottom: 0;
+  color: var(--white);
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  line-height: 1.06;
+}
+
+.about-founder-band .prose {
+  color: rgba(255, 255, 255, 0.78);
+}
+
 .construction-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
@@ -3002,6 +3121,8 @@ h1 {
   .services-hero,
   .projects-hero,
   .contact-hero,
+  .about-hero,
+  .about-founder-band,
   .case-hero,
   .case-brief,
   .case-summary-grid,
@@ -3086,6 +3207,50 @@ h1 {
 
   .contact-hero-card {
     display: none;
+  }
+
+  .about-hero {
+    padding-top: 20px;
+    padding-bottom: 18px;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(2.1rem, 8.3vw, 2.85rem);
+  }
+
+  .about-hero-points {
+    margin: 18px 0 18px;
+  }
+
+  .about-hero-photo {
+    order: -1;
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .about-hero-photo img {
+    width: 96px;
+    height: 96px;
+    aspect-ratio: auto;
+  }
+
+  .about-hero-photo figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0;
+  }
+
+  .about-hero-photo span {
+    text-align: left;
+  }
+
+  .about-founder-band {
+    padding: 30px;
   }
 
   .pricing-hero {
