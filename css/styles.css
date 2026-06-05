@@ -2105,6 +2105,14 @@ h1 {
   color: rgba(255, 255, 255, 0.78);
 }
 
+@media (min-width: 760px) {
+  .project-card-app .project-card-proof dd {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
 .project-card-action {
   display: inline-flex;
   align-items: center;
