@@ -1,91 +1,99 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
   <title id="title">Static mobile app mockup for habitat status tracking</title>
-  <desc id="desc">An anonymized phone interface showing exhibit areas, animal visibility status dots, last updated times, and a refresh control.</desc>
+  <desc id="desc">An anonymized mobile app interface showing exhibit areas, animal visibility status dots, and realtime update indicators.</desc>
   <defs>
     <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
       <stop offset="0" stop-color="#083c44"/>
       <stop offset="1" stop-color="#0c6b6f"/>
     </linearGradient>
+    <linearGradient id="panel" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".08"/>
+    </linearGradient>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#102027" flood-opacity=".22"/>
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#102027" flood-opacity=".24"/>
     </filter>
   </defs>
   <rect width="900" height="620" fill="#f4f8f6"/>
-  <rect x="58" y="72" width="784" height="476" rx="26" fill="url(#bg)"/>
-  <circle cx="742" cy="112" r="88" fill="#f1c16b" opacity=".12"/>
-  <circle cx="124" cy="498" r="104" fill="#ffffff" opacity=".08"/>
-
-  <g filter="url(#shadow)">
-    <rect x="326" y="42" width="248" height="536" rx="38" fill="#102027"/>
-    <rect x="342" y="66" width="216" height="488" rx="28" fill="#ffffff"/>
-    <rect x="416" y="78" width="68" height="8" rx="4" fill="#d7e0de"/>
-  </g>
+  <rect x="50" y="54" width="800" height="512" rx="28" fill="url(#bg)"/>
+  <circle cx="744" cy="124" r="96" fill="#f1c16b" opacity=".12"/>
+  <circle cx="148" cy="500" r="116" fill="#ffffff" opacity=".08"/>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="342" y="66" width="216" height="70" rx="28" fill="#f7faf8"/>
-    <text x="450" y="109" text-anchor="middle" fill="#102027" font-size="20" font-weight="800">on habitat</text>
-    <circle cx="532" cy="106" r="13" fill="#e8f0ed"/>
-    <path d="M528 106a4 4 0 1 0 4-4" fill="none" stroke="#52636c" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M532 99l5 5-5 5" fill="none" stroke="#52636c" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-
-    <g transform="translate(360 150)">
-      <circle cx="22" cy="10" r="6" fill="#249f54" stroke="#000" stroke-opacity=".22"/>
-      <text x="34" y="15" fill="#52636c" font-size="11" font-weight="700">On Habitat</text>
-      <circle cx="118" cy="10" r="6" fill="#9ca3af" stroke="#000" stroke-opacity=".22"/>
-      <text x="130" y="15" fill="#52636c" font-size="11" font-weight="700">Off Habitat</text>
+    <g transform="translate(92 102)">
+      <rect width="220" height="76" rx="18" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".16"/>
+      <text x="22" y="31" fill="#f1c16b" font-size="12" font-weight="850" letter-spacing="1.8">FIELD APP</text>
+      <text x="22" y="58" fill="#ffffff" font-size="24" font-weight="850">Exhibit status</text>
     </g>
 
-    <g transform="translate(362 190)">
-      <rect width="176" height="122" rx="16" fill="#eef4f1" stroke="#d7e0de"/>
-      <rect width="176" height="42" rx="16" fill="#d8ece6"/>
-      <text x="16" y="27" fill="#102027" font-size="15" font-weight="850">North Loop</text>
-      <g transform="translate(16 58)">
-        <circle cx="8" cy="8" r="8" fill="#249f54" stroke="#000" stroke-opacity=".22"/>
-        <text x="28" y="13" fill="#102027" font-size="14" font-weight="750">Habitat A</text>
-        <text x="110" y="13" fill="#52636c" font-size="10">Updated 4m</text>
-      </g>
-      <line x1="16" x2="160" y1="84" y2="84" stroke="#d7e0de"/>
-      <g transform="translate(16 96)">
-        <circle cx="8" cy="8" r="8" fill="#9ca3af" stroke="#000" stroke-opacity=".22"/>
-        <text x="28" y="13" fill="#102027" font-size="14" font-weight="750">Habitat B</text>
-        <text x="110" y="13" fill="#52636c" font-size="10">Updated 18m</text>
-      </g>
+    <g transform="translate(92 214)">
+      <rect width="222" height="66" rx="16" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".14"/>
+      <circle cx="32" cy="33" r="10" fill="#27a85b"/>
+      <text x="54" y="29" fill="#ffffff" font-size="16" font-weight="800">Habitat A</text>
+      <text x="54" y="49" fill="#cfe4df" font-size="12">Active now</text>
+    </g>
+    <g transform="translate(92 300)">
+      <rect width="222" height="66" rx="16" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".14"/>
+      <circle cx="32" cy="33" r="10" fill="#9ca3af"/>
+      <text x="54" y="29" fill="#ffffff" font-size="16" font-weight="800">Habitat B</text>
+      <text x="54" y="49" fill="#cfe4df" font-size="12">Updated 18m</text>
     </g>
 
-    <g transform="translate(362 328)">
-      <rect width="176" height="122" rx="16" fill="#eef4f1" stroke="#d7e0de"/>
-      <rect width="176" height="42" rx="16" fill="#d8ece6"/>
-      <text x="16" y="27" fill="#102027" font-size="15" font-weight="850">South Trail</text>
-      <g transform="translate(16 58)">
-        <circle cx="8" cy="8" r="8" fill="#249f54" stroke="#000" stroke-opacity=".22"/>
-        <text x="28" y="13" fill="#102027" font-size="14" font-weight="750">Habitat C</text>
-        <text x="110" y="13" fill="#52636c" font-size="10">Just now</text>
-      </g>
-      <line x1="16" x2="160" y1="84" y2="84" stroke="#d7e0de"/>
-      <g transform="translate(16 96)">
-        <circle cx="8" cy="8" r="8" fill="#9ca3af" stroke="#000" stroke-opacity=".22"/>
-        <text x="28" y="13" fill="#102027" font-size="14" font-weight="750">Habitat D</text>
-        <text x="110" y="13" fill="#52636c" font-size="10">Updated 1h</text>
-      </g>
+    <g transform="translate(588 172)">
+      <rect width="214" height="72" rx="16" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".16"/>
+      <text x="22" y="30" fill="#f1c16b" font-size="12" font-weight="850" letter-spacing="1.5">PLATFORM</text>
+      <text x="22" y="56" fill="#ffffff" font-size="22" font-weight="850">Android + iOS</text>
+    </g>
+    <g transform="translate(588 268)">
+      <rect width="214" height="92" rx="16" fill="url(#panel)" stroke="#ffffff" stroke-opacity=".16"/>
+      <text x="22" y="30" fill="#f1c16b" font-size="12" font-weight="850" letter-spacing="1.5">SYNC</text>
+      <text x="22" y="58" fill="#ffffff" font-size="26" font-weight="850">Realtime</text>
+      <text x="22" y="76" fill="#cfe4df" font-size="13">shared updates</text>
     </g>
 
-    <g transform="translate(94 132)">
-      <text x="0" y="0" fill="#f1c16b" font-size="13" font-weight="850" letter-spacing="2">FIELD OPERATIONS APP</text>
-      <text x="0" y="42" fill="#ffffff" font-size="38" font-weight="850">Shared exhibit status</text>
-      <text x="0" y="76" fill="#cfe4df" font-size="18">Docent teams could update animal visibility</text>
-      <text x="0" y="102" fill="#cfe4df" font-size="18">from the floor and answer visitors faster.</text>
+    <g filter="url(#shadow)">
+      <rect x="330" y="52" width="240" height="516" rx="38" fill="#102027"/>
+      <rect x="346" y="76" width="208" height="468" rx="28" fill="#ffffff"/>
+      <rect x="420" y="88" width="60" height="7" rx="4" fill="#d7e0de"/>
     </g>
 
-    <g transform="translate(618 216)">
-      <rect width="174" height="76" rx="14" fill="#ffffff" opacity=".12" stroke="#ffffff" stroke-opacity=".18"/>
-      <text x="18" y="28" fill="#f1c16b" font-size="11" font-weight="850" letter-spacing="1.3">PLATFORM</text>
-      <text x="18" y="56" fill="#ffffff" font-size="22" font-weight="850">Android + iOS</text>
+    <rect x="346" y="76" width="208" height="68" rx="28" fill="#f7faf8"/>
+    <text x="450" y="117" text-anchor="middle" fill="#102027" font-size="20" font-weight="850">on habitat</text>
+    <circle cx="530" cy="114" r="12" fill="#e8f0ed"/>
+    <path d="M526 114a4 4 0 1 0 4-4" fill="none" stroke="#52636c" stroke-width="2.3" stroke-linecap="round"/>
+    <path d="M530 107l5 5-5 5" fill="none" stroke="#52636c" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <g transform="translate(364 160)">
+      <circle cx="8" cy="8" r="6" fill="#27a85b"/>
+      <text x="22" y="12" fill="#52636c" font-size="11" font-weight="750">On Habitat</text>
+      <circle cx="106" cy="8" r="6" fill="#9ca3af"/>
+      <text x="120" y="12" fill="#52636c" font-size="11" font-weight="750">Off Habitat</text>
     </g>
-    <g transform="translate(618 316)">
-      <rect width="174" height="92" rx="14" fill="#ffffff" opacity=".12" stroke="#ffffff" stroke-opacity=".18"/>
-      <text x="18" y="28" fill="#f1c16b" font-size="11" font-weight="850" letter-spacing="1.3">BACKEND</text>
-      <text x="18" y="56" fill="#ffffff" font-size="22" font-weight="850">Realtime</text>
-      <text x="18" y="76" fill="#cfe4df" font-size="13">Firebase updates</text>
+
+    <g transform="translate(364 202)">
+      <rect width="172" height="120" rx="16" fill="#eef4f1" stroke="#d7e0de"/>
+      <rect width="172" height="40" rx="16" fill="#d8ece6"/>
+      <text x="16" y="26" fill="#102027" font-size="15" font-weight="850">North Loop</text>
+      <circle cx="24" cy="64" r="8" fill="#27a85b"/>
+      <text x="42" y="69" fill="#102027" font-size="14" font-weight="760">Habitat A</text>
+      <text x="114" y="69" fill="#52636c" font-size="10">4m</text>
+      <line x1="16" x2="156" y1="84" y2="84" stroke="#d7e0de"/>
+      <circle cx="24" cy="102" r="8" fill="#9ca3af"/>
+      <text x="42" y="107" fill="#102027" font-size="14" font-weight="760">Habitat B</text>
+      <text x="114" y="107" fill="#52636c" font-size="10">18m</text>
+    </g>
+
+    <g transform="translate(364 340)">
+      <rect width="172" height="120" rx="16" fill="#eef4f1" stroke="#d7e0de"/>
+      <rect width="172" height="40" rx="16" fill="#d8ece6"/>
+      <text x="16" y="26" fill="#102027" font-size="15" font-weight="850">South Trail</text>
+      <circle cx="24" cy="64" r="8" fill="#27a85b"/>
+      <text x="42" y="69" fill="#102027" font-size="14" font-weight="760">Habitat C</text>
+      <text x="114" y="69" fill="#52636c" font-size="10">now</text>
+      <line x1="16" x2="156" y1="84" y2="84" stroke="#d7e0de"/>
+      <circle cx="24" cy="102" r="8" fill="#9ca3af"/>
+      <text x="42" y="107" fill="#102027" font-size="14" font-weight="760">Habitat D</text>
+      <text x="114" y="107" fill="#52636c" font-size="10">1h</text>
     </g>
   </g>
 </svg>
