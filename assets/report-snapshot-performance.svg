@@ -8,7 +8,7 @@
   <circle cx="104" cy="78" r="9" fill="#d5a44b"/>
   <circle cx="132" cy="78" r="9" fill="#0c6b6f"/>
   <text x="172" y="72" fill="#f1c16b" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800" letter-spacing="2">ANONYMIZED REPORT</text>
-  <text x="172" y="100" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Model comparison and recommendation summary</text>
+  <text x="172" y="100" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Model comparison summary</text>
 
   <g font-family="Inter, Arial, sans-serif">
     <rect x="70" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
