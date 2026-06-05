@@ -596,8 +596,66 @@ h1 {
   font-size: 1.2rem;
 }
 
+.services-hero {
+  width: min(1320px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(400px, 0.76fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 68px);
+  padding-top: 78px;
+  padding-bottom: 62px;
+}
+
+.services-hero h1 {
+  max-width: 760px;
+  font-size: clamp(2.7rem, 3.6vw, 4.15rem);
+  line-height: 1.03;
+}
+
+.services-hero p:not(.eyebrow) {
+  max-width: 680px;
+  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+}
+
+.services-hero figure {
+  position: relative;
+  margin: 0;
+}
+
+.services-hero figure::after {
+  content: "";
+  position: absolute;
+  right: -16px;
+  bottom: -16px;
+  width: 44%;
+  height: 44%;
+  border-right: 2px solid rgba(180, 100, 59, 0.42);
+  border-bottom: 2px solid rgba(180, 100, 59, 0.42);
+  border-radius: 0 0 8px 0;
+  pointer-events: none;
+}
+
+.services-hero img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid rgba(215, 224, 222, 0.9);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 .service-detail-list {
-  padding-top: 34px;
+  padding-top: 54px;
+}
+
+.service-detail-list .detail-row h2 {
+  max-width: 520px;
+  font-size: clamp(1.9rem, 3vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.service-detail-list .detail-row {
+  padding: 38px 0;
 }
 
 .pricing-hero {
@@ -2647,6 +2705,7 @@ h1 {
 
   .split,
   .visual-feature,
+  .services-hero,
   .case-hero,
   .case-brief,
   .case-summary-grid,
@@ -2692,6 +2751,19 @@ h1 {
 
   .page-hero {
     padding-top: 82px;
+  }
+
+  .services-hero {
+    padding-top: 58px;
+    padding-bottom: 42px;
+  }
+
+  .services-hero h1 {
+    font-size: clamp(2.4rem, 10vw, 3.4rem);
+  }
+
+  .services-hero img {
+    aspect-ratio: 16 / 9;
   }
 
   .pricing-hero {
