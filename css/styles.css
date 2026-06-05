@@ -270,7 +270,7 @@ img {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: min(700px, calc(100svh - 82px));
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -293,7 +293,7 @@ img {
   position: relative;
   width: min(var(--max), calc(100% - 40px));
   margin: 0 auto;
-  padding: 110px 0 128px;
+  padding: 82px 0 86px;
 }
 
 .eyebrow,
@@ -318,24 +318,24 @@ p {
 }
 
 h1 {
-  max-width: 850px;
-  margin-bottom: 26px;
-  font-size: clamp(3rem, 7vw, 6.4rem);
-  line-height: 0.96;
+  max-width: 1050px;
+  margin-bottom: 22px;
+  font-size: clamp(2.8rem, 4.8vw, 5rem);
+  line-height: 1;
   letter-spacing: 0;
 }
 
 .hero-lede {
-  max-width: 710px;
+  max-width: 680px;
   color: rgba(255, 255, 255, 0.82);
-  font-size: clamp(1.1rem, 2vw, 1.36rem);
+  font-size: clamp(1.05rem, 1.45vw, 1.22rem);
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 34px;
+  margin-top: 26px;
 }
 
 .button {
@@ -365,7 +365,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 58px;
+  margin-top: 34px;
 }
 
 .trust-strip span {
@@ -2625,15 +2625,15 @@ h1 {
   }
 
   .hero {
-    min-height: 680px;
+    min-height: auto;
   }
 
   .hero-content {
-    padding: 86px 0 98px;
+    padding: 70px 0 78px;
   }
 
   h1 {
-    font-size: clamp(2.8rem, 15vw, 4.2rem);
+    font-size: clamp(2.65rem, 12vw, 3.8rem);
   }
 
   .split,
