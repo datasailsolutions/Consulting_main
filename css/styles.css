@@ -734,6 +734,15 @@ h1 {
   padding-top: 26px;
 }
 
+.pricing-page .section {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+
+.pricing-page .pricing-principles {
+  padding-top: 42px;
+}
+
 .pricing-statement,
 .pricing-callout,
 .pricing-detail-grid article {
@@ -822,7 +831,7 @@ h1 {
   grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
   align-items: center;
   gap: clamp(30px, 5vw, 70px);
-  padding-top: 28px;
+  padding-top: 18px;
 }
 
 .pricing-showcase figure {
@@ -853,8 +862,8 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  padding-top: 16px;
-  padding-bottom: 24px;
+  padding-top: 18px;
+  padding-bottom: 34px;
 }
 
 .pricing-value-strip article {
@@ -903,7 +912,7 @@ h1 {
 }
 
 .pricing-flow-section {
-  padding-top: 62px;
+  padding-top: 50px;
 }
 
 .loop-focus {
@@ -2657,6 +2666,11 @@ h1 {
     padding: 68px 0;
   }
 
+  .pricing-page .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .dark-band {
     padding-top: 68px;
     padding-bottom: 68px;
@@ -2682,7 +2696,31 @@ h1 {
   }
 
   .pricing-hero-inner {
-    padding: 86px 0 92px;
+    padding: 66px 0 66px;
+  }
+
+  .pricing-hero h1 {
+    font-size: clamp(2.7rem, 12vw, 4.1rem);
+  }
+
+  .pricing-hero-points {
+    margin-top: 22px;
+  }
+
+  .pricing-hero-panel {
+    padding: 22px;
+  }
+
+  .pricing-hero-panel > span {
+    margin-bottom: 18px;
+  }
+
+  .hero-equation strong {
+    padding: 12px 14px;
+  }
+
+  .pricing-value-strip article {
+    min-height: 0;
   }
 
   .site-footer {
@@ -2695,6 +2733,9 @@ h1 {
 
   .loop-focus {
     grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 18px;
+    padding: 18px;
   }
 
   .loop-focus::before {
@@ -2712,6 +2753,12 @@ h1 {
   .loop-focus strong {
     justify-self: center;
     transform: rotate(90deg);
+    font-size: 1.18rem;
+  }
+
+  .loop-focus article {
+    min-height: 0;
+    padding: 16px;
   }
 }
 
