@@ -1231,8 +1231,97 @@ h1 {
   margin-top: 24px;
 }
 
+.projects-hero {
+  width: min(1320px, calc(100% - 40px));
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 0.6fr);
+  align-items: center;
+  gap: clamp(34px, 5vw, 68px);
+  padding-top: 78px;
+  padding-bottom: 54px;
+}
+
 .projects-hero h1 {
-  max-width: 1060px;
+  max-width: 880px;
+  font-size: clamp(2.7rem, 3.7vw, 4.25rem);
+  line-height: 1.03;
+}
+
+.projects-hero p:not(.eyebrow) {
+  max-width: 700px;
+  font-size: clamp(1.05rem, 1.4vw, 1.18rem);
+}
+
+.projects-hero-board {
+  position: relative;
+  padding: 26px;
+  color: var(--white);
+  background:
+    linear-gradient(145deg, rgba(7, 28, 33, 0.96), rgba(8, 60, 68, 0.9)),
+    url("../assets/workflow-tools.jpg");
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(241, 193, 107, 0.24);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.projects-hero-board::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  bottom: -50px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid rgba(241, 193, 107, 0.28);
+  border-radius: 50%;
+}
+
+.hero-board-kicker {
+  display: inline-flex;
+  margin-bottom: 22px;
+  color: var(--teal-dark);
+  background: #f1c16b;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.76rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.hero-board-grid strong,
+.hero-board-grid span {
+  display: grid;
+  place-items: center;
+  min-height: 86px;
+  border-radius: 8px;
+}
+
+.hero-board-grid strong {
+  color: var(--teal-dark);
+  background: #f1c16b;
+  font-size: 2rem;
+}
+
+.hero-board-grid span {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.projects-hero-board p {
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.98rem;
 }
 
 .construction-panel {
@@ -1418,7 +1507,8 @@ h1 {
 
 .project-catalog {
   align-items: stretch;
-  padding-top: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  padding-top: 34px;
 }
 
 .project-card {
@@ -2706,6 +2796,7 @@ h1 {
   .split,
   .visual-feature,
   .services-hero,
+  .projects-hero,
   .case-hero,
   .case-brief,
   .case-summary-grid,
@@ -2764,6 +2855,19 @@ h1 {
 
   .services-hero img {
     aspect-ratio: 16 / 9;
+  }
+
+  .projects-hero {
+    padding-top: 58px;
+    padding-bottom: 42px;
+  }
+
+  .projects-hero h1 {
+    font-size: clamp(2.35rem, 9.5vw, 3.3rem);
+  }
+
+  .projects-hero-board {
+    display: none;
   }
 
   .pricing-hero {
