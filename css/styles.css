@@ -2135,7 +2135,11 @@ h1 {
 }
 
 .project-card-no-action {
-  padding-bottom: 24px;
+  padding-bottom: 34px;
+}
+
+.project-preview-grid article.project-card-no-action {
+  padding-bottom: 34px;
 }
 
 .project-card-no-action .project-card-proof {
