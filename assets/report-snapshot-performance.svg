@@ -11,15 +11,15 @@
   <text x="172" y="100" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="800">Model comparison summary</text>
 
   <g font-family="Inter, Arial, sans-serif">
-    <rect x="70" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <rect x="70" y="152" width="300" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
     <text x="92" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">BEST APPROACH</text>
     <text x="92" y="232" fill="#083c44" font-size="30" font-weight="850">Logistic model</text>
-    <rect x="356" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
-    <text x="378" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">ACCURACY</text>
-    <text x="378" y="232" fill="#083c44" font-size="42" font-weight="850">89.0%</text>
-    <rect x="642" y="152" width="246" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
-    <text x="664" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">CV AUC</text>
-    <text x="664" y="232" fill="#083c44" font-size="42" font-weight="850">0.934</text>
+    <rect x="404" y="152" width="210" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <text x="426" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">ACCURACY</text>
+    <text x="426" y="232" fill="#083c44" font-size="42" font-weight="850">89.0%</text>
+    <rect x="650" y="152" width="238" height="110" rx="14" fill="#f7faf8" stroke="#d7e0de"/>
+    <text x="672" y="188" fill="#52636c" font-size="14" font-weight="800" letter-spacing="1.4">CV AUC</text>
+    <text x="672" y="232" fill="#083c44" font-size="42" font-weight="850">0.934</text>
 
     <text x="70" y="318" fill="#102027" font-size="24" font-weight="850">Accuracy by approach</text>
     <line x1="280" y1="352" x2="280" y2="520" stroke="#d7e0de"/>
