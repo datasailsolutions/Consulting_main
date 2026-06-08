@@ -661,7 +661,7 @@ h1 {
 .pricing-hero {
   position: relative;
   width: 100%;
-  min-height: min(580px, calc(100svh - 82px));
+  min-height: min(520px, calc(100svh - 82px));
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -675,19 +675,19 @@ h1 {
 }
 
 .pricing-hero-inner {
-  width: min(var(--max), calc(100% - 40px));
+  width: min(1180px, calc(100% - 64px));
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(310px, 0.55fr);
   align-items: center;
   gap: clamp(34px, 6vw, 78px);
-  padding: 68px 0 72px;
+  padding: 56px 0 60px;
 }
 
 .pricing-hero h1 {
   max-width: 900px;
   color: var(--white);
-  font-size: clamp(3rem, 4.35vw, 4.65rem);
+  font-size: clamp(2.85rem, 4vw, 4.2rem);
   line-height: 1;
 }
 
@@ -720,7 +720,7 @@ h1 {
 
 .pricing-hero-panel {
   position: relative;
-  padding: 28px;
+  padding: 24px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 8px;
@@ -793,8 +793,9 @@ h1 {
 }
 
 .pricing-page .section {
-  padding-top: 58px;
-  padding-bottom: 58px;
+  width: min(1120px, calc(100% - 64px));
+  padding-top: 44px;
+  padding-bottom: 44px;
 }
 
 .pricing-page .pricing-principles {
@@ -802,13 +803,13 @@ h1 {
 }
 
 .pricing-page .cta-band {
-  padding-top: 52px;
-  padding-bottom: 52px;
+  padding-top: 42px;
+  padding-bottom: 42px;
 }
 
 .pricing-page .cta-band h2 {
   max-width: 900px;
-  font-size: clamp(1.9rem, 3vw, 3.25rem);
+  font-size: clamp(1.85rem, 2.6vw, 2.9rem);
 }
 
 .pricing-statement,
@@ -1244,9 +1245,9 @@ h1 {
 .pricing-brief {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
-  gap: 20px;
-  padding-top: 42px;
-  padding-bottom: 32px;
+  gap: 18px;
+  padding-top: 34px;
+  padding-bottom: 26px;
 }
 
 .pricing-promise,
@@ -1260,13 +1261,13 @@ h1 {
 }
 
 .pricing-promise {
-  padding: clamp(30px, 4.5vw, 48px);
+  padding: clamp(28px, 3.5vw, 40px);
 }
 
 .pricing-promise h2,
 .pricing-factors-panel h2 {
   margin-bottom: 18px;
-  font-size: clamp(2rem, 3.4vw, 3.4rem);
+  font-size: clamp(1.9rem, 2.9vw, 2.85rem);
   line-height: 1.05;
 }
 
@@ -1281,8 +1282,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 360px;
-  padding: 28px;
+  min-height: 320px;
+  padding: 24px;
   color: var(--white);
   background:
     linear-gradient(145deg, rgba(7, 28, 33, 0.96), rgba(8, 60, 68, 0.9)),
@@ -1308,7 +1309,7 @@ h1 {
   display: block;
   margin-top: auto;
   color: var(--white);
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.95rem, 3.2vw, 2.9rem);
   line-height: 1;
 }
 
@@ -1348,8 +1349,8 @@ h1 {
 }
 
 .pricing-process-compact {
-  padding-top: 24px;
-  padding-bottom: 28px;
+  padding-top: 22px;
+  padding-bottom: 26px;
 }
 
 .pricing-process-compact .section-heading {
@@ -1360,7 +1361,7 @@ h1 {
 
 .pricing-process-compact .section-heading h2 {
   max-width: 940px;
-  font-size: clamp(2.05rem, 3vw, 3.35rem);
+  font-size: clamp(1.95rem, 2.7vw, 3rem);
 }
 
 .pricing-process-compact .section-heading .prose {
@@ -1376,8 +1377,8 @@ h1 {
 
 .pricing-process-grid article {
   position: relative;
-  min-height: 176px;
-  padding: 22px;
+  min-height: 160px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -1413,10 +1414,10 @@ h1 {
 .pricing-factors-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1.12fr);
-  gap: 24px;
+  gap: 18px;
   align-items: stretch;
-  padding-top: 34px;
-  padding-bottom: 44px;
+  padding-top: 28px;
+  padding-bottom: 34px;
 }
 
 .pricing-factors-panel > div:first-child {
@@ -1450,8 +1451,8 @@ h1 {
 }
 
 .pricing-factor-list article {
-  min-height: 150px;
-  padding: 22px;
+  min-height: 138px;
+  padding: 20px;
 }
 
 .pricing-factor-list span {
@@ -3717,6 +3718,11 @@ h1 {
 }
 
 @media (max-width: 560px) {
+  .pricing-page .section,
+  .pricing-hero-inner {
+    width: min(var(--max), calc(100% - 40px));
+  }
+
   .brand {
     gap: 9px;
   }
