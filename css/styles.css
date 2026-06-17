@@ -3413,24 +3413,25 @@ h1 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
   }
 
   .site-footer > div:first-child {
     align-items: flex-start;
     flex-direction: column;
-    flex-basis: auto;
+    flex: 0 0 auto;
     gap: 10px;
     width: 100%;
   }
 
   .site-footer p {
+    flex: 0 0 auto;
     max-width: 100%;
     white-space: normal;
   }
 
   .footer-links {
-    flex-basis: auto;
+    flex: 0 0 auto;
     justify-content: flex-start;
     width: 100%;
   }
@@ -3714,22 +3715,25 @@ h1 {
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
   }
 
   .site-footer > div:first-child {
     align-items: flex-start;
     flex-direction: column;
+    flex: 0 0 auto;
     gap: 10px;
     width: 100%;
   }
 
   .site-footer p {
+    flex: 0 0 auto;
     max-width: 100%;
     white-space: normal;
   }
 
   .footer-links {
+    flex: 0 0 auto;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
