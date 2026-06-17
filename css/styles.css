@@ -1904,6 +1904,14 @@ h1 {
   color: var(--muted);
 }
 
+.about-pricing-link .button {
+  flex: 0 0 auto;
+  color: var(--white);
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+  box-shadow: 0 16px 34px rgba(8, 60, 68, 0.18);
+}
+
 .construction-panel {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
