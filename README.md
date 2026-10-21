@@ -29,3 +29,5 @@ http://127.0.0.1:4173/
 ## Deployment Shape
 
 This is a plain static site. For Lightsail, the deployable files are the HTML pages plus the `css`, `js`, and `assets` folders. They can be served directly by Nginx or Apache without a build step.
+
+Pushes to `main` auto-deploy via GitHub Actions. See `deploy/DEPLOY.md` for setup.
