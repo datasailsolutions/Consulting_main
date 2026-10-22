@@ -6,27 +6,25 @@ site files (`*.html`, `css/`, `js/`, `assets/`) to the Lightsail server with
 
 You can also run it manually from GitHub: **Actions → Deploy to Lightsail → Run workflow**.
 
-## One-time server setup
+## Server
 
-SSH to the Lightsail box (`ssh sentrysail`), then:
+- Box: `sentrysail` (54.191.209.220). DNS for `datasailsolutions.com` and `www`
+  points straight at it.
+- Web root: `/var/www/datasail-site` (owned by `ubuntu`).
+- Nginx site: `/etc/nginx/sites-available/datasailsolutions.com`, TLS via certbot.
+  `deploy/nginx-datasailsolutions.conf` mirrors it.
+
+`rsync --delete` removes anything in the web root that isn't a public site file,
+including any old git checkout (`.git`, `AGENTS.md`, `README.md`, `dev-server.js`).
+Don't `git pull` on the server anymore; push to `main` instead.
+
+## One-time setup
 
 ```bash
-# Web root owned by the deploy user
-sudo mkdir -p /var/www/datasailsolutions
-sudo chown ubuntu:ubuntu /var/www/datasailsolutions
-
 # Dedicated deploy key (run on your own machine, not the server)
 ssh-keygen -t ed25519 -C "github-deploy-datasail" -f datasail_deploy -N ""
-# Append datasail_deploy.pub to ~/.ssh/authorized_keys on the server
-
-# Nginx site
-sudo cp deploy/nginx-datasailsolutions.conf /etc/nginx/sites-available/datasailsolutions
-sudo ln -s /etc/nginx/sites-available/datasailsolutions /etc/nginx/sites-enabled/
-sudo nginx -t && sudo systemctl reload nginx
-sudo certbot --nginx -d datasailsolutions.com -d www.datasailsolutions.com
+# Append datasail_deploy.pub to /home/ubuntu/.ssh/authorized_keys on sentrysail
 ```
-
-In Cloudflare, point `datasailsolutions.com` and `www` A records at the Lightsail IP.
 
 ## GitHub secrets
 
@@ -34,8 +32,8 @@ Repo → **Settings → Secrets and variables → Actions** (or the `production`
 
 | Secret | Value |
 | --- | --- |
-| `DEPLOY_HOST` | Lightsail public IP |
+| `DEPLOY_HOST` | `54.191.209.220` |
 | `DEPLOY_USER` | `ubuntu` |
 | `DEPLOY_SSH_KEY` | Contents of the private key `datasail_deploy` |
-| `DEPLOY_PATH` | Optional. Defaults to `/var/www/datasailsolutions` |
-| `DEPLOY_KNOWN_HOSTS` | Optional but recommended. Output of `ssh-keyscan -H <ip>` |
+| `DEPLOY_PATH` | Optional. Defaults to `/var/www/datasail-site` |
+| `DEPLOY_KNOWN_HOSTS` | Optional but recommended. Output of `ssh-keyscan -H 54.191.209.220` |

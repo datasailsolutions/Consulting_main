@@ -16,7 +16,7 @@ jobs:
     env:
       DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
       DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
-      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '/var/www/datasailsolutions' }}
+      DEPLOY_PATH: ${{ secrets.DEPLOY_PATH || '/var/www/datasail-site' }}
     steps:
       - uses: actions/checkout@v4
 
