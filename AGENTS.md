@@ -69,6 +69,8 @@ Files:
 - `assets/datasail-logo-option-5.png` - generated concept crop
 - `assets/datasail-mark-option-5.png` - transparent mark used in header/footer
 - `dev-server.js` - tiny local static server
+- `.github/workflows/deploy.yml` - auto-deploy to Lightsail on push to `main`
+- `deploy/` - deploy docs and the mirrored nginx config
 
 ## Design Direction
 
@@ -121,31 +123,45 @@ $env:HOST='0.0.0.0'; node dev-server.js
 
 However, phone access only works from the same Wi-Fi unless using a public tunnel or deployed server.
 
-## Existing Infrastructure Context
+## Hosting & Deploy (current as of 2026-10-22)
 
-Related SentrySail docs found at:
+**Push to `main` = live.** `.github/workflows/deploy.yml` rsyncs the public files
+(`*.html` in the root, `css/`, `js/`, `assets/`) to the server with `--delete`.
+Takes about a minute. Can also be run manually: Actions → Deploy to Lightsail → Run workflow.
+Full setup details: `deploy/DEPLOY.md`.
 
-```text
-C:\Users\mikel\code\sentrysail\INTEGRATIONS.md
-```
+- Server: `sentrysail` Lightsail box, `54.191.209.220` (`ssh sentrysail`). Business box; shared with the SentrySail app.
+- DNS: `datasailsolutions.com` and `www` A records point straight at the box (not proxied).
+- Web root: `/var/www/datasail-site`. Plain static files, no git checkout, no PM2.
+- Nginx: `/etc/nginx/sites-available/datasailsolutions.com`, TLS via certbot.
+  `deploy/nginx-datasailsolutions.conf` mirrors it. Keep the two in sync.
+- Deploy auth: key `~/.ssh/datasail_deploy` on Mikel's PC, logs in as `ubuntu`.
+  Repo secrets `DEPLOY_HOST`, `DEPLOY_USER`, `DEPLOY_SSH_KEY`, `DEPLOY_KNOWN_HOSTS` are set.
+  `DEPLOY_PATH` is unset (the workflow defaults to `/var/www/datasail-site`).
 
-Relevant existing infrastructure:
+Rules:
 
-- AWS Lightsail server
-- Ubuntu
-- Nginx
-- PM2 for SentrySail Next.js app
-- Existing server IP from SentrySail notes: `54.191.209.220`
-- SSH shortcut from SentrySail notes: `ssh sentrysail`
-- Cloudflare used for DNS/security/email routing for SentrySail
-- GoDaddy used as registrar
-- Existing deploy style for SentrySail: `git pull`, `npm run build`, `pm2 restart sentrysail`
+- **Do not `git pull` on the server** or copy the repo into the web root. That once exposed
+  `/.git/` publicly. Only the public files get deployed.
+- Anything new that should be public must live in a root `*.html` file or in `css/`, `js/`, or `assets/`.
+  Other files (`AGENTS.md`, `deploy/`, `design-snapshots/`, `dev-server.js`) are never deployed.
+- Nginx denies dotfiles (`location ~ /\. { deny all; }`). Keep that block.
+- Editing nginx over SSH: shell quoting strips the backslash in `/\.` and turns the rule into
+  "deny everything" (this caused an outage). Edit `deploy/nginx-datasailsolutions.conf` locally,
+  `scp` it up, then `grep -F 'location ~ /\. {'` it, then `nginx -t`, then reload. Back up the live file to `/root/` first.
+  From Git Bash on Windows, set `MSYS_NO_PATHCONV=1` for ssh/scp.
+- After any deploy or nginx change, check that `https://datasailsolutions.com/` returns 200 and `/.git/HEAD` returns 403.
+- `gh` is not logged in on Mikel's PC. For GitHub API calls (secrets, workflow runs), use the token from
+  `git credential fill` (host github.com, username `datasailsolutions`). Run unattended git network commands with
+  `GCM_INTERACTIVE=never GIT_TERMINAL_PROMPT=0`.
 
-For this DataSail site:
+Known follow-up: the deploy key logs in as `ubuntu`, which has sudo. Moving it to a dedicated
+low-privilege deploy user would be safer.
 
-- Static HTML/CSS/JS means PM2 is not needed.
-- Nginx can serve the files directly.
-- Good deployment path: GitHub repo -> git pull on Lightsail -> Nginx static server block for `datasailsolutions.com` / `www.datasailsolutions.com`.
+## Local Clutter
+
+These local files are untracked and not part of the site. Ignore them; don't commit or deploy them:
+`welcome-vincent.html`, `assets/vincent-armenta.jpg`, `.codex-remote-attachments/`, `design-snapshots/`.
 
 ## Git Notes
 
@@ -180,4 +196,4 @@ C:\Codex Projects\DataSailSolutions\datasail-site
 ```
 
 - Keep edits practical and visible.
-- Commit and push when asked.
+- Commit and push when asked. Remember that pushing to `main` deploys to the live site.
