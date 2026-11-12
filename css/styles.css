@@ -4018,3 +4018,42 @@ h1 {
     transform: none;
   }
 }
+
+/* Example projects: centre a lone last card so an odd count looks intentional */
+@media (min-width: 781px) {
+  .project-catalog > .project-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 18px) / 2);
+  }
+}
+
+/* Case-study pages: full-width illustration of the build */
+.case-art-section .section-heading {
+  max-width: 760px;
+  margin-bottom: 28px;
+}
+
+.case-art {
+  max-width: 1040px;
+  margin: 0;
+  padding: 18px;
+  background: var(--white, #fff);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: 0 30px 70px rgba(16, 32, 39, 0.14);
+}
+
+.case-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.case-art figcaption {
+  margin: 14px 6px 2px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
